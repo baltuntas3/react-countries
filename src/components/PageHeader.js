@@ -1,4 +1,4 @@
-import { useCountry } from "../context/CountryContext";
+import { useCountry } from "../context/UseCountry";
 import "../styles/PageHeader.css";
 export default function PageHeader() {
     const { isDarkMode, setIsDarkMode } = useCountry();
