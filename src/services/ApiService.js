@@ -9,17 +9,15 @@ const getAllCountries = async () => {
     } catch (err) {
         return [undefined, err];
     }
-
-    // return countryData;
 };
+//https://restcountries.com/v2/alpha/{alpha2Code}
 
-const getAllCountriesByRegion = async (region) => {
+const getCountryDetails = async (cca2) => {
     try {
-        const data = await axiosInstance.get(`https://restcountries.com/v3.1/region/${region}`);
+        const data = await axiosInstance.get(`https://restcountries.com/v3.1/alpha/${cca2}`);
         return [data, undefined];
     } catch (err) {
         return [undefined, err];
     }
 };
-
-export { getAllCountries, getAllCountriesByRegion };
+export { getAllCountries, getCountryDetails };

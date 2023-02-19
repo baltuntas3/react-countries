@@ -1,27 +1,34 @@
 import "../styles/CountryCard.css";
+import { useCountry } from "../context/UseCountry";
+import { Link } from "react-router-dom";
+
 export default function CountryCard({ country }) {
-    // const capital = country.altSpellings.join(",");
-    // console.log(capital);
-
-    // Capital:{" "}
-    // {country.altSpellings.map((capital, index) => (
-    //     <span key={index}>{capital},</span>
-    // ))}
-    // console.log(country);
-
+    const { loading } = useCountry();
     return (
-        <div className="country-container">
-            <div className="country-flag">
+        <Link to={`/country-details/${country.cca2}`} className="link">
+            <div
+                className={
+                    !loading
+                        ? "country-container country margin-between-components"
+                        : "country-container img-loaded margin-between-components"
+                }
+            >
                 <img className="img-flag" src={country.flags.svg} alt="a"></img>
+                <div className="country-title">
+                    <h3>{country.name.official}</h3>
+                </div>
+                <div className="country-description">
+                    <p className="country-detail">
+                        <strong>Population:</strong> {country.population}
+                    </p>
+                    <p className="country-detail">
+                        <strong>Region:</strong> {country.region}
+                    </p>
+                    <p className="country-detail">
+                        <strong>Capital:</strong> {country.capital}
+                    </p>
+                </div>
             </div>
-            <div className="country-title">
-                <p>{country.name.official}</p>
-            </div>
-            <div className="country-description">
-                <p className="country-detail">Population: {country.population}</p>
-                <p className="country-detail">Region: {country.region}</p>
-                <p className="country-detail">Capital: {country.capital}</p>
-            </div>
-        </div>
+        </Link>
     );
 }

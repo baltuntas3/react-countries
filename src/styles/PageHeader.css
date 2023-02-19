@@ -3,8 +3,20 @@
     justify-content: center;
     align-items: center;
     height: 150px;
-    border: 1px solid red;
+    background-color: var(--theme-element-color);
 }
 .header-title {
     margin-right: 5px;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.dark-mode-btn {
+    width: 30px;
+    background-color: transparent;
+    border: none;
+}
+
+.light-mode-icon {
+    fill: white;
 }
