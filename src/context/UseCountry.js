@@ -19,6 +19,14 @@ const CountryContextProvider = ({ children }) => {
         setLoading(false);
     };
 
+    document.body.classList.add("app");
+
+    if (isDarkMode) {
+        document.body.classList.add("dark-mode");
+    } else {
+        document.body.classList.remove("dark-mode");
+    }
+
     useEffect(() => {
         const regexp = new RegExp(filters?.text, "ig");
 

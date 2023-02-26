@@ -23,17 +23,40 @@
     transition: background-color 0.3s ease;
 }
 
+.app-dark-mode {
+    background-color: var(--theme-bg-color);
+    color: var(--theme-text-color);
+    transition: background-color 0.3s ease;
+}
+
 .country-card {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+    justify-self: center; */
+
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    gap: 1.5rem;
     padding: 5px;
-    margin-right: 90px;
-    margin-left: 90px;
+    width: 90%;
 }
 
 .margin-between-components {
-    margin-bottom: 10px;
+    margin-bottom: 2.5rem;
+}
+.div80 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--theme-element-color);
+    box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
+}
+
+.div90 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

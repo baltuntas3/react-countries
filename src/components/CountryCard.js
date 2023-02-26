@@ -13,7 +13,9 @@ export default function CountryCard({ country }) {
                         : "country-container img-loaded margin-between-components"
                 }
             >
-                <img className="img-flag" src={country.flags.svg} alt="a"></img>
+                <div className="img-div">
+                    <img className="img-flag" src={country.flags.svg} alt="a"></img>
+                </div>
                 <div className="country-title">
                     <h3>{country.name.official}</h3>
                 </div>

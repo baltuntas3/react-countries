@@ -2,19 +2,27 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     width: 300px;
     background-color: var(--theme-element-color);
+    scale: 1;
 }
 
+.img-div {
+    position: relative;
+    height: 160px;
+    max-width: none;
+    max-height: none;
+}
 .img-flag {
-    max-width: 100%;
-    max-height: 100%;
-    height: 220px;
+    border-radius: 5px;
+    height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 .country-container:hover {
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* transition: scale cubic-bezier(0.075, 0.82, 0.165, 1); */
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
         rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    scale: 1.1;
+    transition: scale 0.5s ease;
 }
 
 .country-description {
@@ -37,7 +45,7 @@
 .country {
     display: block;
     box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
-    border-radius: 5px;
+    border-radius: 10px;
     opacity: 1;
     transition: opacity 1s ease;
 }
@@ -45,4 +53,9 @@
 .link {
     color: inherit;
     text-decoration: none;
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
 }

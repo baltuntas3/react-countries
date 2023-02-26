@@ -1,9 +1,9 @@
 .header-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 150px;
-    background-color: var(--theme-element-color);
+    width: 80%;
 }
 .header-title {
     margin-right: 5px;
@@ -11,12 +11,23 @@
     font-weight: 800;
 }
 
-.dark-mode-btn {
-    width: 30px;
+.dark-mode-btn-icon {
+    width: 25px;
     background-color: transparent;
     border: none;
 }
 
 .light-mode-icon {
     fill: white;
+}
+
+.btn-color {
+    color: var(--theme-text-color);
+}
+
+.btn-text {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: lighter;
 }
