@@ -35,6 +35,6 @@
 
 @media (max-width: calc(1440px - 375px)) {
     .header-container {
-        max-width: 285px;
+        max-width: 300px;
     }
 }

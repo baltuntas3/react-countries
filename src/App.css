@@ -45,12 +45,6 @@
 .margin-between-components {
     margin-bottom: 2.5rem;
 }
-.wrapper-header-container {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--theme-element-color);
-    box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
-}
 
 .wrapper-container {
     padding: 0 5rem;
@@ -59,6 +53,7 @@
 }
 
 .wrapper-container-header {
+    padding: 0 5rem;
     margin: auto;
     background-color: var(--theme-element-color);
     box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
@@ -68,17 +63,17 @@
     .country-card {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        margin: auto;
     }
 
     .wrapper-container {
-        padding: 0;
+        padding: 0 1.5rem;
+        max-width: 375px;
+        max-height: none;
     }
 
-    /* .wrapper-container-header {
-        width: 100vw;
-    } */
+    .wrapper-container-header {
+        padding: 0;
+    }
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
