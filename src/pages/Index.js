@@ -1,6 +1,5 @@
 import "../App.css";
 import CountryCard from "../components/CountryCard";
-import PageFooter from "../components/PageFooter";
 import SearchBar from "../components/SearchBar";
 import PageHeader from "../components/PageHeader";
 import { useCountry } from "../context/UseCountry";
@@ -10,8 +9,8 @@ export default function Index() {
     return (
         <>
             <PageHeader></PageHeader>
-            <SearchBar></SearchBar>
-            <div className="div90">
+            <div className="wrapper-container">
+                <SearchBar></SearchBar>
                 <div className="country-card">
                     {!loading ? (
                         filteredCountries.length ? (
@@ -26,7 +25,6 @@ export default function Index() {
                     )}
                 </div>
             </div>
-            <PageFooter></PageFooter>
         </>
     );
 }

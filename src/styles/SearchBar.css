@@ -11,9 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
-    padding: 5px;
-    margin: auto;
+    margin: 2.5rem auto;
 }
 .search-input {
     padding: 0.7rem 2.2rem;
@@ -44,4 +42,28 @@
 
 .select-item {
     max-width: 10rem;
+}
+
+@media (max-width: calc(1440px - 375px)) {
+    .search-bar-container {
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+        margin: 2.5rem auto;
+    }
+
+    .search-icon {
+        position: absolute;
+        width: 20px;
+        margin-right: 17rem;
+        margin-top: 10px;
+    }
+
+    .search-input {
+        width: 19rem;
+    }
+
+    .select-item {
+        max-width: 100%;
+    }
 }

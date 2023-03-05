@@ -3,7 +3,8 @@
     justify-content: space-between;
     align-items: center;
     height: 150px;
-    width: 80%;
+    margin: auto;
+    max-width: 1270px;
 }
 .header-title {
     margin-right: 5px;
@@ -30,4 +31,10 @@
     align-items: center;
     font-size: 18px;
     font-weight: lighter;
+}
+
+@media (max-width: calc(1440px - 375px)) {
+    .header-container {
+        max-width: 285px;
+    }
 }
