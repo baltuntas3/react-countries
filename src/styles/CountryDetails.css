@@ -32,21 +32,29 @@
 
 .back-btn-icon {
     width: 20px;
+    vertical-align: middle;
+}
+
+.back-btn-text {
+    display: inline-block;
+    padding: 3px;
+    font-size: 18px;
+    vertical-align: middle;
 }
 
 .back-btn {
+    display: inline-block;
     border: none;
+    text-align: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 0.5rem;
+    padding: 0.4rem 2.2rem;
 }
+
 .btn-link {
-    display: flex;
-    justify-content: center;
+    display: inline-block;
     text-decoration: none;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    gap: 10px;
-    height: 2.2rem;
+    vertical-align: middle;
 }
 
 @media (max-width: calc(1440px - 375px)) {
