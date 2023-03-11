@@ -5,8 +5,10 @@ import PageHeader from "../components/PageHeader";
 import "../styles/CountryDetails.css";
 import "../App.css";
 import { formatNumber } from "../utils/Util";
+import { useCountry } from "../context/UseCountry";
 
 export default function CountryDetails() {
+    const { setFilters } = useCountry();
     const [loading, setLoading] = useState(true);
     const { cca2 } = useParams();
     const [countryDetails, setCountryDetails] = useState({});
@@ -47,6 +49,10 @@ export default function CountryDetails() {
         // eslint-disable-next-line
     }, [countryDetails, loading]);
 
+    const clearFilter = () => {
+        setFilters({ text: "", region: "" });
+    };
+
     return (
         <>
             <PageHeader></PageHeader>
@@ -54,7 +60,7 @@ export default function CountryDetails() {
                 <div className="btn-wrapper margin-between-components">
                     <div className="back-btn-container">
                         <Link className="btn-link" to="/">
-                            <button className="back-btn change-mod">
+                            <button className="back-btn change-mod" onClick={clearFilter}>
                                 <svg className="back-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                     <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
                                 </svg>
@@ -108,8 +114,12 @@ export default function CountryDetails() {
                                 <div className="">
                                     <p className="country-detail">
                                         <strong>Borders:</strong>
-                                        {countryDetails.borders?.map((border) => {
-                                            return <span className="detail-border">{border}</span>;
+                                        {countryDetails.borders?.map((border, key) => {
+                                            return (
+                                                <span className="detail-border" key={key}>
+                                                    {border}
+                                                </span>
+                                            );
                                         })}
                                     </p>
                                 </div>
