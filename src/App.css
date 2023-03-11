@@ -16,7 +16,6 @@
 .change-mod {
     background-color: var(--theme-element-color);
     color: var(--theme-text-color);
-
     fill: var(--theme-text-color);
 }
 
