@@ -13,6 +13,13 @@
     --theme-input-color: hsl(0deg, 0%, 52%);
 }
 
+.change-mod {
+    background-color: var(--theme-element-color);
+    color: var(--theme-text-color);
+
+    fill: var(--theme-text-color);
+}
+
 .app {
     display: flex;
     flex-direction: column;

@@ -17,7 +17,7 @@ export default function CountryCard({ country }) {
                     <img className="img-flag" src={country.flags.svg} alt="a"></img>
                 </div>
                 <div className="country-title">
-                    <h3>{country.name.official}</h3>
+                    <h3>{country.name.common}</h3>
                 </div>
                 <div className="country-description">
                     <p className="country-detail">
