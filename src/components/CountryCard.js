@@ -1,6 +1,7 @@
 import "../styles/CountryCard.css";
 import { useCountry } from "../context/UseCountry";
 import { Link } from "react-router-dom";
+import { formatNumber } from "../utils/Util";
 
 export default function CountryCard({ country }) {
     const { loading } = useCountry();
@@ -21,7 +22,7 @@ export default function CountryCard({ country }) {
                 </div>
                 <div className="country-description">
                     <p className="country-detail">
-                        <strong>Population:</strong> {country.population}
+                        <strong>Population:</strong> {formatNumber(country.population)}
                     </p>
                     <p className="country-detail">
                         <strong>Region:</strong> {country.region}

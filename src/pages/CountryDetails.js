@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import "../styles/CountryDetails.css";
 import "../App.css";
+import { formatNumber } from "../utils/Util";
 
 export default function CountryDetails() {
     const [loading, setLoading] = useState(true);
@@ -79,7 +80,7 @@ export default function CountryDetails() {
                                         {objStr?.nativeNames?.slice(0, objStr?.nativeNames.length - 2)}
                                     </p>
                                     <p className="country-detail">
-                                        <strong>Population:</strong> {countryDetails.population}
+                                        <strong>Population:</strong> {formatNumber(countryDetails.population)}
                                     </p>
                                     <p className="country-detail">
                                         <strong>Region:</strong> {countryDetails.region}
